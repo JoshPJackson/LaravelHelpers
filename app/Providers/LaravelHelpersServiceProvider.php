@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Console\Commands\ClearAll;
+use App\Console\Commands\ClearLogs;
 use App\Console\Commands\DBFreshSeed;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +19,8 @@ class LaravelHelpersServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 ClearAll::class,
-                DBFreshSeed::class
+                DBFreshSeed::class,
+                ClearLogs::class
             ]);
         }
     }
