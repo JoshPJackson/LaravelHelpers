@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Console\Command;
 
 class ClearLogs extends Command
 {
